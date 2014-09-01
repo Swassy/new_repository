@@ -29,7 +29,7 @@ public class DatabaseClass implements DatabaseInterface
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, customer.getUserEmail());
 			ps.setString(2, customer.getUserPassword());
-			
+			ps.executeUpdate();
 			ps.close();
  
 		} catch (SQLException e) {
